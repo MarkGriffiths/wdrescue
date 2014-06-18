@@ -1,0 +1,1138 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"NOT",
+				"NOTIFYUNITS"
+			],
+			[
+				"NO",
+				"NOTIFYUNITS"
+			],
+			[
+				"gig",
+				"gigabyte"
+			],
+			[
+				"CU",
+				"CUSTOM_CLUSTER"
+			],
+			[
+				"he",
+				"help_advice"
+			],
+			[
+				"tools",
+				"tools"
+			],
+			[
+				"re",
+				"recovering"
+			],
+			[
+				"bas",
+				"basic_help"
+			],
+			[
+				"sort",
+				"sort_"
+			],
+			[
+				"q",
+				"query_"
+			],
+			[
+				"frame",
+				"frameSize"
+			],
+			[
+				"fram",
+				"frameSize"
+			],
+			[
+				"pr",
+				"processTick"
+			],
+			[
+				"da",
+				"data"
+			],
+			[
+				"doc",
+				"document_"
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"m",
+				"margin-left"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"bo",
+				"bolder"
+			],
+			[
+				"_",
+				"_Interface"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"paddin",
+				"padding-top"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"border-b",
+				"border-bottom"
+			],
+			[
+				"suff",
+				"suffix_"
+			],
+			[
+				"pre",
+				"prefix_"
+			],
+			[
+				"vla",
+				"value_"
+			],
+			[
+				"pe",
+				"precision_"
+			],
+			[
+				"abs",
+				"absValue"
+			],
+			[
+				"s",
+				"subCurrencySymbol_"
+			],
+			[
+				"refresh",
+				"refresh_"
+			],
+			[
+				"file",
+				"filename_"
+			],
+			[
+				"refr",
+				"refreshAgent"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"un",
+				"unitaryFiatPrice"
+			],
+			[
+				"vo",
+				"vol_cur"
+			],
+			[
+				"vin",
+				"vinData_"
+			],
+			[
+				"get",
+				"getRawTransaction"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"pa",
+				"padding-right"
+			],
+			[
+				"counter",
+				"counter-reset"
+			],
+			[
+				"coun",
+				"counter-increment"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"b",
+				"border"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"bor",
+				"border-left"
+			],
+			[
+				"border-bo",
+				"border-bottom-right-radius"
+			],
+			[
+				"border-r",
+				"border-bottom-left-radius"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"med",
+				"medium"
+			],
+			[
+				"t",
+				"text-align"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"img",
+				"img	img"
+			],
+			[
+				"clean",
+				"clean_build"
+			],
+			[
+				"css",
+				"css-builder"
+			],
+			[
+				"ch",
+				"chartPanel"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"val",
+				"valueAxis"
+			],
+			[
+				"min",
+				"minValue"
+			],
+			[
+				"max",
+				"maxValue"
+			],
+			[
+				"up",
+				"updateBuffer"
+			],
+			[
+				"tick",
+				"tickData_"
+			],
+			[
+				"data",
+				"dataProvider"
+			],
+			[
+				"d",
+				"data_"
+			],
+			[
+				"sy",
+				"_symbol"
+			],
+			[
+				"co",
+				"conformerSnapshot_"
+			],
+			[
+				"process",
+				"process"
+			],
+			[
+				"col",
+				"colour"
+			],
+			[
+				"inde",
+				"indexReport"
+			],
+			[
+				"def",
+				"defaultIndices"
+			],
+			[
+				"tim",
+				"timestamp"
+			],
+			[
+				"con",
+				"conformer"
+			],
+			[
+				"divi",
+				"divisor"
+			],
+			[
+				"bit",
+				"bitcoinPrice"
+			],
+			[
+				"colo",
+				"colour_"
+			],
+			[
+				"field",
+				"field_"
+			],
+			[
+				"pro",
+				"protocol"
+			],
+			[
+				"bes",
+				"bestPrice"
+			],
+			[
+				"ex",
+				"exchangeID_"
+			],
+			[
+				"total",
+				"totalVolume"
+			],
+			[
+				"storage",
+				"storageMap_"
+			],
+			[
+				"las",
+				"last_id"
+			],
+			[
+				"_op",
+				"_openID"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"days",
+				"daystamp"
+			],
+			[
+				"day",
+				"daystamp"
+			],
+			[
+				"_las",
+				"_lastMode"
+			],
+			[
+				"c",
+				"callback_"
+			],
+			[
+				"cli",
+				"clientInfo"
+			],
+			[
+				"limi",
+				"limit_"
+			],
+			[
+				"br",
+				"brightGreen"
+			],
+			[
+				"yellow",
+				"brightYellow"
+			],
+			[
+				"mark",
+				"marketIndex"
+			],
+			[
+				"xc",
+				"xcSource"
+			],
+			[
+				"dela",
+				"delayIncrement"
+			],
+			[
+				"del",
+				"delayOffset"
+			],
+			[
+				"net",
+				"networkID_"
+			],
+			[
+				"api",
+				"apiCoinID"
+			],
+			[
+				"real",
+				"_realtimeMetrics"
+			],
+			[
+				"snap",
+				"snapshot"
+			],
+			[
+				"exc",
+				"exchangeData_"
+			],
+			[
+				"exch",
+				"exchangeID_"
+			],
+			[
+				"_shou",
+				"_shouldStore"
+			],
+			[
+				"fn",
+				"fnZone"
+			],
+			[
+				"supp",
+				"supplySource"
+			],
+			[
+				"Block",
+				"blockOffset"
+			],
+			[
+				"top",
+				"topOffest"
+			],
+			[
+				"hash",
+				"hash_"
+			],
+			[
+				"log",
+				"logText_"
+			],
+			[
+				"call",
+				"callback_"
+			],
+			[
+				"star",
+				"startBlock_"
+			],
+			[
+				"netw",
+				"networkFactory"
+			],
+			[
+				"blockN",
+				"blockNumber_"
+			],
+			[
+				"blo",
+				"blockNumber_"
+			],
+			[
+				"_coll",
+				"_collections"
+			],
+			[
+				"st",
+				"structure_"
+			],
+			[
+				"n",
+				"networkMap_"
+			],
+			[
+				"to",
+				"toJSON"
+			],
+			[
+				"exportMa",
+				"exportStorageMap"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/User/Grunt.sublime-build",
+	"command_palette":
+	{
+		"height": 335.0,
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: AsyncLoop"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"pak",
+				"Package Control: Enable Package"
+			],
+			[
+				"js",
+				"Format: Javascript"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"sub",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pc",
+				"Package Control: Install Package"
+			],
+			[
+				"tr",
+				"Transpose Character"
+			],
+			[
+				"rev",
+				"Permute Lines: Reverse"
+			]
+		],
+		"width": 453.0
+	},
+	"console":
+	{
+		"height": 680.0,
+		"history":
+		[
+			"help",
+			"env",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": true,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Mark/Projects/Open Source/wdrescue/wdrescue",
+		"/usr/local/bin/wdrescue",
+		"/Users/Mark/Desktop/WD Recover/ddrecovery",
+		"/Users/Mark/.config/fish/functions/fish_l.fish",
+		"/Users/Mark/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Mark/Desktop/WD Recover/rescue.log",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Service/Templates/snapshot/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Storage/index.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/UI/CC-index.html",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/UI/CC-index.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/UI/CC-index-chart.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_css/_less/CC-mainIndex.less",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Service/index.js",
+		"/Volumes/Web Development/CC-Web/_Develop/defaults.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/config.json",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCApp/Index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/package.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Proxy/lib/server.js",
+		"/Users/Mark/Downloads/2700-0003-0196-voip.xml",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/UI/CC-tweet-index.js",
+		"/Volumes/Web Development/CC-Web/_Develop/index.html",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/UI/CC-tweet-top5.js",
+		"/Volumes/Web Development/CC-Web/Gruntfile.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCApp/Tweet.js",
+		"/Users/Mark/Desktop/tweetCC.js",
+		"/Volumes/Web Development/CC-Web/_Develop/tweet.html",
+		"/Users/Mark/Desktop/capture.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/_Extensions.js",
+		"/Users/Mark/Desktop/captureTweet.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCApp/Twitter.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_css/_less/_twitter.less",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/UI/CC-members.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCApp/TwitterCC10.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Upstart/cce-capture.conf",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Upstart/cce-process.conf",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Upstart/cce-service.conf",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Exchanges/Factories/BTC-e/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Exchanges/Factories/Cryptsy/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Exchanges/Factories/jsonAPI/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Exchanges/Factories/MtGox/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Exchanges/Factories/Vircurex/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Networks/Factories/coinRPCDaemon/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Upstart/cc-engine.conf",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/_Cryptos/feathercoin.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Conformation/conformerClass.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/Formatters.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCApp/CQM.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_css/_less/_cqm.less",
+		"/Volumes/Web Development/CC-Web/_Develop/cqm.php",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/UI/CC-CQM.html",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/UI/CC-CQM.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/Library.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/UI/CC-winLose.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/Core.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCApp/List.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCApp/Press.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCApp/Rules.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/Analytics.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCApp/Analytics.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Processing/Processes/CC10B.json",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/UI/CC-winLose-tr.html",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Dispatcher/index.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/ChartLib.js",
+		"/Volumes/Web Development/CC-Web/_Develop/rules.html",
+		"/Volumes/Web Development/CC-Web/_Develop/list.html",
+		"/Volumes/Web Development/CC-Web/_Develop/press.html",
+		"/Volumes/Web Development/CC-Web/_Develop/_css/_less/_list.less",
+		"/Volumes/Web Development/CC-Web/_Develop/_css/_less/Press.less",
+		"/Volumes/Web Development/CC-Web/_Develop/pressImport.html",
+		"/Volumes/Web Development/CC-Web/_Develop/_css/_less/Library/overrides.less",
+		"/Volumes/Web Development/CC-Web/_Develop/_css/_less/_press.less",
+		"/Volumes/Web Development/CC-Web/_Develop/_css/Press.css",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/MarketData.js",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCApp/Analystics.js",
+		"/Volumes/Web Development/CC-Web/_Develop/press/index.html",
+		"/Volumes/Web Development/CC-Web/_Develop/_css/_less/Library/shared-mixins.less",
+		"/Volumes/Web Development/CC-Web/_Develop/_css/_less/Library/typography.less",
+		"/Volumes/Web Development/CC-Web/_Develop/_css/_less/Core.less",
+		"/Volumes/Web Development/CC-Web/_Develop/rules/index.html",
+		"/Volumes/Web Development/CC-Web/_Develop/press/press.html",
+		"/Volumes/Web Development/CC-Web/_Develop/_css/_index.css",
+		"/Users/Mark/Projects/CryptoComp/CC-Proxy/lib/collector.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Dispatcher/snapshotTools.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Conformation/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Proxy/config.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Proxy/upstart/ccproxyd.conf",
+		"/Users/Mark/Projects/CryptoComp/CC-Proxy/bin/ccproxyd.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Proxy/README.md",
+		"/Users/Mark/Projects/CryptoComp/CC-Proxy/package.json",
+		"/Volumes/Web Development/CC-Web/_Develop/proxy.php",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Agents/Factories/Alexa/index.js",
+		"/Users/Mark/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Volumes/Web Development/CC-Web/_Develop/_scripts/CCLib/IndexData.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Processing/Commands/Indexer/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Proxy/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/README.md",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/LICENSE",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Exchanges/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Processing/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Processing/Commands/Rates/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Service/Templates/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Service/Templates/coins/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Service/Templates/indices/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/debugger.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Agents/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Agents/Factories/Firebrick/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Extensions/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Networks/index.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Networks/Factories/coinRPCDaemon/blockProcessor.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Networks/Factories/coinRPCDaemon/mintCalc.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Networks/Factories/coinRPCDaemon/supplyCalc.js",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Processing/Processes/CC10.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Processing/Processes/CC10X.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/_Cryptos/litecoin.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/_Cryptos/dogecoin.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/_Disabled/litecoin.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Agents/Members/alexa.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Agents/Members/firebrick.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Exchanges/Members/bitfinex.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Exchanges/Members/bitstamp.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Exchanges/Members/btce.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Exchanges/Members/bter.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Exchanges/Members/cryptsy.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Exchanges/Members/mtgox.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/Exchanges/Members/vircurex.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/_Cryptos/Disabled/worldcoin.json",
+		"/Users/Mark/Projects/CryptoComp/CC-Engine/_Cryptos/quarkcoin.json"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			"",
+			"-*node_modules*",
+			"",
+			"<open folders>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"_emitter",
+			"fetchIndexDay",
+			"_storage.fetch",
+			"26",
+			"document_",
+			"_storage.fetch",
+			"page",
+			"handleError",
+			".site-header",
+			"background-color: #000;",
+			"background-color:",
+			"Meta",
+			"background-color: #000;",
+			", ",
+			"ContributionR",
+			"activity",
+			".html",
+			"rules.html",
+			"brooklyn",
+			"Tuesday",
+			"Saturday",
+			"Friday",
+			"volume",
+			"activityScalar",
+			"activity",
+			"prefix",
+			"_fiatCurrency",
+			"unitaryOpenFiatPrice",
+			"unitaryFiatPrice",
+			"_dataMap",
+			"_blockchainFieldMap",
+			"assembleComposite",
+			"compileMarketData",
+			"// ╰────────────┴",
+			"// ╭────────────┬",
+			"// ╭────────────",
+			"Crypt◉C◉mp",
+			"╰───────────",
+			"Crypt◉C◉mp",
+			"lastPrice",
+			"data_.ticker.vol_cur",
+			"data_.ticker.last",
+			"console.log",
+			"_symbol",
+			"this._symbol",
+			"this._symbol ",
+			"supply",
+			"supply_",
+			"_moneySupplyFn",
+			"throw error; //",
+			"console",
+			"dogecoin",
+			"console",
+			"txID_",
+			"supplyStructure_",
+			"exchangeData_",
+			"_symbol",
+			"_moneySupplyFn",
+			"console.",
+			"console.log",
+			"CryptoComp",
+			"CryptoComposite",
+			"Crypto Composite",
+			"CryptoComp",
+			"UST",
+			"•	",
+			"`",
+			"ormula",
+			"`",
+			"class=\"formula\"",
+			"formula",
+			"& ",
+			"<br />",
+			">`",
+			"<br />",
+			">`",
+			"<br />",
+			" 	= 	",
+			"	=	",
+			"•	",
+			"</li>",
+			";&",
+			"3%",
+			"415440",
+			"@blackFade",
+			"CC-activityScalar",
+			"moment",
+			"mini",
+			"_CCService",
+			"%>",
+			"\"",
+			"'",
+			"volumeRef",
+			"capRef",
+			"volumeRef",
+			"activityGraph",
+			"target_",
+			"DOMtarget",
+			"arguments",
+			"openGuide",
+			"_openMoment",
+			"this.updateBuffer",
+			"this.chartData",
+			"this.updateBuffer",
+			"data_",
+			"stalingrad",
+			"tickData_",
+			"_CCService",
+			".qtip",
+			"string",
+			"background",
+			"stackedMode",
+			"this.chart",
+			"chart",
+			"amchart_",
+			"id_",
+			"_JSready",
+			"_Controller",
+			"defaults_",
+			"_Controller",
+			"widget_.id",
+			"this.DOMid",
+			"message",
+			"',",
+			"_fiatCurrency",
+			"compileDisplayValues",
+			"grunt",
+			"readyMap = _"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"cursor_",
+			"tweet",
+			"capture",
+			"background-color: #293329;",
+			", \n",
+			"/rules",
+			"Tue",
+			"Sat",
+			"Fri",
+			"openFiatPrice",
+			"fiatPrice",
+			"_dataMapLast",
+			"// ╰─────────────────┴",
+			"// ╭─────────────────┬",
+			"// ╭─────────────────",
+			"CryptoComposite",
+			"╰────────────────",
+			"CryptoComposite",
+			"price",
+			"_currencySymbol",
+			"supply_",
+			"tx_",
+			"serviceData_",
+			"CryptoComposite",
+			"UTC",
+			"<p>",
+			"$$",
+			"</a></li>",
+			"CC-activityScalar",
+			"'",
+			"\"",
+			"volumeGraph",
+			"_openGuide",
+			"chartData_",
+			"_updateBuffer",
+			"updateData_",
+			"data_",
+			"&",
+			"string_",
+			"chart_",
+			"amchart_",
+			"CCLib",
+			"this.DOMid",
+			"Factory",
+			"_dateFormat",
+			"_logActive",
+			"_logFile",
+			"_logLevel",
+			"_consoleLevel",
+			"cyan",
+			"Logger.debug(_logPrefix + (\"▀ ᵂᵒʳᵏˢ ▀\").colour('white') + ((\"─\").fill(39)).colour('cyan",
+			"_memberFixedSupplies",
+			"this._conformerConfig",
+			"exchange_",
+			"network_",
+			"_passthru",
+			"exchange_",
+			"this",
+			"conformerSnapshot_",
+			"this._memberFixedSuppies",
+			"openSnapshot_",
+			"snapshot_",
+			"debug",
+			"jsonFactory",
+			"\"type\": \"Relative\",",
+			"\"type\": \"relative\",",
+			"\"type\"",
+			"storageMap_",
+			"if (callback_) process.nextTick(function() { callback_(self._id, self._name, self._symbol); });",
+			"",
+			"_agents",
+			"/home/crypto/",
+			"\"/home/crypto/",
+			"taskData",
+			"Logger.debug(self._symbol + (\" │ \").colour('red') + ",
+			"_dbHost",
+			"_snapshotQuantisation",
+			"Logger.",
+			"Logger",
+			"Config",
+			"Logger",
+			"masterMap_",
+			"netStorageMap_",
+			"_realtimeMaps",
+			"height",
+			"blocks",
+			"block_",
+			"blockData_",
+			"_logger.debug",
+			"blockData",
+			"infoData_",
+			"agentID_",
+			"agent_",
+			"coinRPCDaemonFactory",
+			"daemonRPCFactory",
+			"_cryptoNetworks",
+			"exchangeID_",
+			"exchangeData_",
+			"exchange_",
+			"storageMap_",
+			"'",
+			"_currentValues",
+			"pollInfo",
+			"processPoll",
+			"info_",
+			"supply_",
+			"processInfo",
+			"error",
+			"_currentSnap",
+			"height",
+			"height_",
+			"height",
+			"this._clientConfig",
+			"_clientConfig",
+			"networkData_",
+			"_symbol",
+			"_name",
+			"_logger",
+			"_Name",
+			"_ID",
+			"_logger",
+			"collection_",
+			"Pattern",
+			"self",
+			"doUpdate",
+			"haveUpdate",
+			"updateTrace",
+			"params"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 65.0
+	},
+	"output.find_results":
+	{
+		"height": 102.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 102.0
+	},
+	"project": "wdrescue.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"code/DateTimeUtility.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/Mark/Documents/Max/Packages/MarxLib/misc/MarxLib.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+		],
+		"width": 378.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 218.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

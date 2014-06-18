@@ -1,0 +1,338 @@
+#! /bin/bash
+
+# ddrescue wrapper script for recovering Western Digital Advanced Format drives
+# on Mac OS X 10.8+ (though changes to the 'notify' function would likely make
+# it portable across Linux and BSD )
+#
+# Dependencies:
+# ddrescue installed from Homebrew (brew install ddrescue)
+#
+# The MIT License (MIT)
+#
+# Copyright (c) 2014 Mark Griffiths (mark@thebespokepixel.com)
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+#Set paths
+SCRIPT_PATH=$0
+CURRENT_DIR="`pwd`"
+
+# Base Help
+basic_help() {
+	cat << EOF
+wdrescue - ddrescue helper for recovering Western Digital AF drives.
+Tools to help rescue a bad or failing WD drive by cloning or imaging
+while minimising user error and enhancing performance.
+
+Setup: wdrescue --setup name [source device] [destination device or file]
+
+Creates a directory 'name' on the current path and configures it as
+a 'rescue workbench' containing rescue subcommands and cache:
+
+  ./scan	[options] start [size]: Scanning tools.
+  ./fix		[options] start [size]: Fixing tools.
+  ./check	[options] start [size]: Check status of recovery.
+
+Use -h for more help on each command.
+
+Source and destination devices should be raw disks: /dev/rdiskX
+
+After reboot: wdrescue --check
+
+Checks config for changes in disk mounting points.
+
+EOF
+	exit
+}
+
+scan_help() {
+	cat << EOF
+wdrescue - scanning tools.
+
+Usage: ./scan -hmlcnsrIM start [size]
+
+  start: scan start point in GB
+  size: optional scan length in GB (default: 1GB)
+
+  Options:
+    -h: Show help
+    -m: Max read cluster (64MB)
+    -l: Large read cluster (32MB)
+    -c size: Custom read cluster size
+    -n: Standard read cluster (64k)
+    -s: Auto skip
+    -r: Reverse scan
+    -I: Infinite timeout
+    -M: Work in MBs instead of GBs
+
+EOF
+	exit
+}
+
+check_help() {
+	cat << EOF
+wdrescue - Log checking tools.
+
+Usage: ./check -h start [size]
+
+  start: scan start point in GB
+  size: optional scan length in GB (default: 1GB)
+
+  Options:
+    -h: Show help
+
+Note: check will return an error if scan or fix hasn\'t been run
+
+EOF
+	exit
+}
+
+fix_help() {
+	cat << EOF
+wdrescue - fixing tools.
+
+Usage: ./fix -htrIM start [size]
+
+  start: scan start point in GB
+  size: optional scan length in GB (default: 1GB)
+
+  Options:
+    -h: Show help
+    -r: Retry sectors
+    -t: Retrim errors
+    -I: Infinite timeout
+    -M: Work in MBs instead of GBs
+
+EOF
+	exit
+}
+
+help_advice() {
+	echo "Try '`basename $0` --help' for more information."
+	exit
+}
+
+write_config() {
+	cat << EOF > "$1"
+SOURCE='$SOURCE'
+DEST='$DEST'
+LOG=$LOG
+EOF
+}
+
+read_config() {
+	if [ -f ./wdconfig ]; then
+		. ./wdconfig
+	else
+		echo "`basename $0`: Current directory (`pwd`) is not a rescue cache."
+		help_advice
+	fi
+}
+
+function notify {
+	say -a Ensemble -v Alex $@ 2>/dev/null
+	echo $@
+}
+
+function runRescue {
+	if [[ $EUID -ne 0 ]]; then
+		echo "This script must be run as root" 1>&2
+		exit 1
+	fi
+	echo "Running: ddrescue $@ $SOURCE $DEST $LOG"
+	ddrescue $@ $SOURCE $DEST $LOG
+}
+
+function runCheck {
+	echo "Running: ddrescuelog  $@ -t $LOG"
+	ddrescuelog  $@ -t $LOG
+}
+
+case `basename $0` in
+	'wdrescue' )
+		case $1 in
+		'--help' )
+			basic_help
+			;;
+		'--setup' )
+			if [ -z "$2" ]; then
+				echo "`basename $0` --setup: No project name given."
+				help_advice
+			else
+				RESCUE_DIR="$CURRENT_DIR/$2"
+
+				mkdir -p "$RESCUE_DIR"
+				ln -s $0 "$RESCUE_DIR/scan"
+				ln -s $0 "$RESCUE_DIR/fix"
+				ln -s $0 "$RESCUE_DIR/check"
+
+				SOURCE=${3:-'/dev/zero'}
+				DEST=${4:-'/dev/null'}
+				LOG="wdrescue.log"
+
+				write_config "$RESCUE_DIR/wdconfig"
+			fi
+			;;
+		'--check' )
+			read_config
+			echo "Source: $SOURCE"
+			if [[ ( -b  "$SOURCE" ) || ( -c "$SOURCE") ]]; then
+				diskutil info $SOURCE
+			else
+				echo "$SOURCE is not a disk."
+			fi
+
+			echo "Destination: $DEST"
+			if [[ ( -b  "$DEST" ) || ( -c "$DEST") ]]; then
+				diskutil info $DEST
+			elif [ -f "$DEST" ]; then
+				echo "$DEST is a file."
+				du -h "$DEST"
+			else
+				echo "$DEST is not a disk or file."
+			fi
+
+			;;
+		* )
+			echo "`basename $0`: Nothing to do."
+			help_advice
+			;;
+		esac
+	;;
+'scan' )
+	read_config
+
+	OPTIONS='-b 4KiB -n -v -f'
+	CLUSTER='-c 256 -K 512KiB'
+	SKIP=''
+	REVERSE=''
+	TIMEOUT='-T 30s'
+	UNITS="GB"
+	NOTIFYUNITS="gigabyte"
+
+	while getopts "h?mlc:nsrIM" opt; do
+		case "$opt" in
+		h|\?)
+			scan_help
+			;;
+		m)  CLUSTER='-c 16384 -K 32MiB'
+			;;
+		l)  CLUSTER='-c 8192 -K 16MiB'
+			;;
+		c)  CUSTOM_CLUSTER=$OPTARG
+			CUSTOM_SKIP=$(($CUSTOM_CLUSTER * 2048))
+			CLUSTER="-c $CUSTOM_CLUSTER -K $CUSTOM_SKIP"
+			;;
+		n)  CLUSTER=''
+			;;
+		s)  SKIP='-a 0'
+			;;
+		r)  REVERSE='-R'
+			;;
+		I)  TIMEOUT=''
+			;;
+		M)  UNITS='MB'
+			NOTIFYUNITS="megabyte"
+			;;
+		esac
+	done
+	shift "$((OPTIND-1))"
+
+	if [ $# -lt 1 ]; then
+		scan_help
+	elif [ $# -lt 2 ]; then
+		OPTIONS="$OPTIONS -i $1$UNITS -s 1$UNITS"
+		NOTIFICATON="for one $NOTIFYUNITS from $1 ${NOTIFYUNITS}s"
+	else
+		OPTIONS="$OPTIONS -i $1$UNITS -s $2$UNITS"
+		NOTIFICATON="for $2 ${NOTIFYUNITS}s from $1 ${NOTIFYUNITS}s"
+	fi
+	runRescue $OPTIONS $CLUSTER $SKIP $TIMEOUT $REVERSE
+	notify "Scan complete $NOTIFICATON"
+	;;
+
+'fix' )
+
+	read_config
+
+	OPTIONS='-b 4KiB -r 3 -C -vv -f'
+	RETRIM=''
+	RETRY=''
+	TIMEOUT='-T 120s'
+	UNITS="GB"
+	NOTIFYUNITS="gigabyte"
+
+	while getopts "h?trIM" opt; do
+		case "$opt" in
+		h|\?)
+			fix_help
+			;;
+		t)  RETRIM='-M'
+			;;
+		r)  RETRY='-A'
+			;;
+		I)  TIMEOUT=''
+			;;
+		M)  UNITS='MB'
+			NOTIFYUNITS="megabyte"
+			;;
+		esac
+	done
+	shift "$((OPTIND-1))"
+
+	if [ $# -lt 1 ]; then
+		fix_help
+	elif [ $# -lt 2 ]; then
+		OPTIONS="$OPTIONS -i $1$UNITS -s 1$UNITS"
+		NOTIFICATON="for one $NOTIFYUNITS from $1 ${NOTIFYUNITS}s"
+	else
+		OPTIONS="$OPTIONS -i $1$UNITS -s $2$UNITS"
+		NOTIFICATON="for $2 ${NOTIFYUNITS}s from $1 ${NOTIFYUNITS}s"
+	fi
+	runRescue $OPTIONS $RETRIM $RETRY $TIMEOUT
+	notify "Fix complete $NOTIFICATON"
+	;;
+
+'check' )
+
+	read_config
+
+	UNITS="GB"
+
+	while getopts "h?M" opt; do
+		case "$opt" in
+		h|\?)
+			check_help
+			;;
+		M)  UNITS='MB'
+			;;
+		esac
+	done
+	shift "$((OPTIND-1))"
+
+	if [ $# -lt 1 ]; then
+		check_help
+	elif [ $# -lt 2 ]; then
+		OPTIONS="$OPTIONS -i $1$UNITS -s 1$UNITS"
+	else
+		OPTIONS="$OPTIONS -i $1$UNITS -s $2$UNITS"
+	fi
+	runCheck $OPTIONS
+	;;
+esac
