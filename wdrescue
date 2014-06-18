@@ -146,6 +146,7 @@ read_config() {
 }
 
 function notify {
+	#TODO: Handle notifications better!
 	say -a Ensemble -v Alex $@ 2>/dev/null
 	echo $@
 }
