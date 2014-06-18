@@ -12,17 +12,15 @@ After a some testing, I began using ddrescue to rescue the disk in chunks. I ver
 
 
 ## Installation
-Firstly install `ddrescue`, best done on the Mac with HomeBrew.
+Firstly install `ddrescue`, best done on the Mac with [HomeBrew](http://brew.sh).
 
     brew install ddrescue
 
-Clone this repository to your system.
+Clone this repository to your system, move `wdrescue` from inside the repo into a directory in your `$PATH` (I use `/usr/local/bin` or another location would be `~/bin`) and make sure it's executable.
 
-    git clone https://github.com/MarkGriffiths/wdrescue.git
-
-Move `wdrescue` from inside the repo into a directory in your `$PATH`. I use `/usr/local/bin`. Another location would be `~/bin`. Make sure it's executable.
-
-```Shell
+```bash
+git clone https://github.com/MarkGriffiths/wdrescue.git
+cd wdrescue
 cp wdrescue /usr/local/bin/
 chmod +x /usr/local/bin/wdrescue
 ```
