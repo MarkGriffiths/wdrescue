@@ -65,7 +65,7 @@ scan_help() {
 	cat << EOF
 wdrescue - scanning tools.
 
-Usage: ./scan -hmlcnsrIM start [size]
+Usage: ./scan -hmlcnsRIM start [size]
 
   start: scan start point in GB
   size: optional scan length in GB (default: 1GB)
@@ -77,7 +77,7 @@ Usage: ./scan -hmlcnsrIM start [size]
     -c size: Custom read cluster size
     -n: Standard read cluster (64k)
     -s: Auto skip
-    -r: Reverse scan
+    -R: Reverse scan
     -I: Infinite timeout
     -M: Work in MBs instead of GBs
 
@@ -107,15 +107,16 @@ fix_help() {
 	cat << EOF
 wdrescue - fixing tools.
 
-Usage: ./fix -htrIM start [size]
+Usage: ./fix -htrRIM start [size]
 
   start: scan start point in GB
   size: optional scan length in GB (default: 1GB)
 
   Options:
     -h: Show help
-    -r: Retry sectors
     -t: Retrim errors
+    -r: Retry sectors
+    -R: Reverse scan
     -I: Infinite timeout
     -M: Work in MBs instead of GBs
 
@@ -227,7 +228,7 @@ case `basename $0` in
 	UNITS="GB"
 	NOTIFYUNITS="gigabyte"
 
-	while getopts "h?mlc:nsrIM" opt; do
+	while getopts "h?mlc:nsRIM" opt; do
 		case "$opt" in
 		h|\?)
 			scan_help
@@ -238,13 +239,16 @@ case `basename $0` in
 			;;
 		c)  CUSTOM_CLUSTER=$OPTARG
 			CUSTOM_SKIP=$(($CUSTOM_CLUSTER * 2048))
+			if [[ $CUSTOM_SKIP -lt 65536 ]]; then
+				CUSTOM_SKIP=65536
+			fi
 			CLUSTER="-c $CUSTOM_CLUSTER -K $CUSTOM_SKIP"
 			;;
 		n)  CLUSTER=''
 			;;
 		s)  SKIP='-a 0'
 			;;
-		r)  REVERSE='-R'
+		R)  REVERSE='-R'
 			;;
 		I)  TIMEOUT=''
 			;;
@@ -275,16 +279,19 @@ case `basename $0` in
 	OPTIONS='-b 4KiB -r 3 -C -vv -f'
 	RETRIM=''
 	RETRY=''
+	REVERSE=''
 	TIMEOUT='-T 120s'
 	UNITS="GB"
 	NOTIFYUNITS="gigabyte"
 
-	while getopts "h?trIM" opt; do
+	while getopts "h?trRIM" opt; do
 		case "$opt" in
 		h|\?)
 			fix_help
 			;;
 		t)  RETRIM='-M'
+			;;
+		R)  REVERSE='-R'
 			;;
 		r)  RETRY='-A'
 			;;
@@ -306,7 +313,7 @@ case `basename $0` in
 		OPTIONS="$OPTIONS -i $1$UNITS -s $2$UNITS"
 		NOTIFICATON="for $2 ${NOTIFYUNITS}s from $1 ${NOTIFYUNITS}s"
 	fi
-	runRescue $OPTIONS $RETRIM $RETRY $TIMEOUT
+	runRescue $OPTIONS $RETRIM $RETRY $REVERSE $TIMEOUT
 	notify "Fix complete $NOTIFICATON"
 	;;
 
