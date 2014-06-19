@@ -45,7 +45,7 @@ diskutil list
 diskutil info /dev/diskX
 ```
 
-Now create the recovery project. You'll need to use the raw disk devices for best performance which are found at /dev/rdiskX. It's possible to use the standard block devices at /dev/diskX, but these will be much slower and the kernel is likely to try and interfere has you hit bad blocks on the bad drive.
+Now create the recovery project. You'll need to use the raw disk devices for best performance which are found at /dev/rdiskX. It's possible to use the standard block devices at /dev/diskX, but these will be much slower and the kernel is likely to try and interfere as you hit bad blocks on the bad drive.
 ```bash
 wdrescue --setup project_name /dev/rdisk(Source) /dev/rdisk(Destination)
 cd project_name
@@ -136,3 +136,4 @@ Note: check will return an error if scan or fix hasn't been run
 ## TODO
 - [ ] Proper notications on completion of a rescue phase.
 - [ ] Improve `wdrescue --check` to report if mount points have changed.
+- [ ] Add example of recovery workflow.
