@@ -30,7 +30,7 @@
 # THE SOFTWARE.
 
 #Set paths
-SCRIPT_PATH=$0
+SCRIPT_PATH="$0"
 CURRENT_DIR="`pwd`"
 
 # Base Help
@@ -125,7 +125,7 @@ EOF
 }
 
 help_advice() {
-	echo "Try '`basename $0` --help' for more information."
+	echo "Try '`basename $SCRIPT_PATH` --help' for more information."
 	exit
 }
 
@@ -141,7 +141,7 @@ read_config() {
 	if [ -f ./wdconfig ]; then
 		. ./wdconfig
 	else
-		echo "`basename $0`: Current directory (`pwd`) is not a rescue cache."
+		echo "`basename "$SCRIPT_PATH"`: Current directory (`pwd`) is not a rescue cache."
 		help_advice
 	fi
 }
@@ -166,7 +166,7 @@ function runCheck {
 	ddrescuelog  $@ -t $LOG
 }
 
-case `basename $0` in
+case `basename "$SCRIPT_PATH"` in
 	'wdrescue' )
 		case $1 in
 		'--help' )
@@ -174,15 +174,15 @@ case `basename $0` in
 			;;
 		'--setup' )
 			if [ -z "$2" ]; then
-				echo "`basename $0` --setup: No project name given."
+				echo "`basename $SCRIPT_PATH` --setup: No project name given."
 				help_advice
 			else
 				RESCUE_DIR="$CURRENT_DIR/$2"
 
 				mkdir -p "$RESCUE_DIR"
-				ln -s $0 "$RESCUE_DIR/scan"
-				ln -s $0 "$RESCUE_DIR/fix"
-				ln -s $0 "$RESCUE_DIR/check"
+				ln -s "$SCRIPT_PATH" "$RESCUE_DIR/scan"
+				ln -s "$SCRIPT_PATH" "$RESCUE_DIR/fix"
+				ln -s "$SCRIPT_PATH" "$RESCUE_DIR/check"
 
 				SOURCE=${3:-'/dev/zero'}
 				DEST=${4:-'/dev/null'}
@@ -212,7 +212,7 @@ case `basename $0` in
 
 			;;
 		* )
-			echo "`basename $0`: Nothing to do."
+			echo "`basename "$SCRIPT_PATH"`: Nothing to do."
 			help_advice
 			;;
 		esac

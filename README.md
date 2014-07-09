@@ -136,4 +136,4 @@ Note: check will return an error if scan or fix hasn't been run
 ## TODO
 - [ ] Proper notications on completion of a rescue phase.
 - [ ] Improve `wdrescue --check` to report if mount points have changed.
-- [ ] Add example of recovery workflow.
+- [ ] Add examples of recovery workflow.
